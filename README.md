@@ -18,9 +18,3 @@ Veja o projeto online:
 ## 🔍 Tecnologias utilizadas
 - HTML5
 - CSS3
-
-## 📷 Background
-O background foi usada apenas para ilustração. Caso queira fazer alguma alteração, sinta-se à vontade para personalizar como preferir.
-
-## 🚧 Em desenvolvimento
-Este projeto está em construção e receberá novas funcionalidades em breve.
