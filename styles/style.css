@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    
+    /* Colors */
+    --color1: #23D538;
+    --color2: #408047;
+    --color3: #39553C;
+    --color4: #2B332B;
+
+    /* Fonts */
+    --title: Funnel Sans, sans-serif;
+    --text: Quicksand, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 100vw;
+    height: 100dvh;
+}
+
+header > h1 {
+    font: normal 400 2em var(--title);
+    color: white;
+}
+
+header {
+    background-color: var(--color4);
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0px 20px;
+    
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font: normal 400 1.2em var(--text);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: var(--color3);
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.hero {
+    background: url(/assets/images/backgroundG.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 855px;
+    color: white;
+    box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.300);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+}
+
+.hero h1 {
+    font: normal 400 4em var(--title);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.499);
+}
+
+.hero p {
+    font: normal 400 1.5em var(--text);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.499);
+}
+
+.about-us {
+    background-color: var(--color4);
+    width: 100%;
+    height: 855px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.about-us .image {
+    width: 500px;
+    height: 600px;
+
+    
+}
+
+.about-us .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.items{
+    color: white;
+    text-align: center;
+}
+
+.items img{
+    width: 60px;
+    margin-bottom: 20px;
+}
