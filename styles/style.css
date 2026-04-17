@@ -8,8 +8,9 @@
     --color3:     #2E4959;
     --color4:     #687E8C;   
     --color5:     #F2F2F2;
-    --text-primary:  #e8e8e8;  
-    --text-secund:   #cacaca;
+    --text-primary:  white;  
+    --text-secund:   #dedbdb;
+    --text-third:    #e8e8e8;  
 
     /* Icon (corrigido: variável estava indefinida) */
     --icon-bg:    #2E4959;
@@ -34,12 +35,15 @@ body {
 header > h1 {
     font: normal 400 2em var(--title);
     color: var(--text-primary);
+    cursor: pointer;
 }
 
 header {
     background-color: var(--color1);
     width: 100%;
     height: 90px;
+    position: sticky;
+    top: 0;
 
     display: flex;
     justify-content: space-between;
@@ -49,14 +53,64 @@ header {
 }
 
 header a {
-    color: var(--text-secund);
-    text-decoration: none;
-    font: normal 400 1.3em var(--text);
+    letter-spacing: 0.5px;
 }
 
 nav {
     display: flex;
     gap: 30px;
+    position: relative;
+    font: normal 400 1.3em var(--text);
+}
+
+nav > a {
+    color: var(--text-secund);
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color4);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--text-primary);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.action {
+    background-color: var(--color3);
+    padding: 10px 15px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action > a {
+    font: normal 400 1.4em var(--text);
+    color: var(--text-primary);
+    text-decoration: none;
+} 
+
+.action::after {
+    
+}
+
+.action:hover {
+    background-color: var(--color4);
+    
 }
 
 .hero {
@@ -87,10 +141,10 @@ nav {
 .about-us {
     background-color: var(--color2);
     width: 100%;
-    min-height: 550px;
+    max-height: 855px;
     height: auto;
     padding: 4rem 3rem;
-    align-items: start;
+    align-items: stretch;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -98,8 +152,8 @@ nav {
 }
 
 .about-us .image {
-    width: 550px;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     margin: auto;
 
     display: flex;
