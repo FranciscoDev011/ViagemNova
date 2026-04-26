@@ -14,6 +14,7 @@
     --text-third:    #e8e8e8;  
 
     --icon-bg:    #2E4959;
+    --card-bg:    #ffffff08;
 
     /* Fonts */
     --title: Funnel Sans, sans-serif;
@@ -208,7 +209,7 @@ nav a:hover::after {
     border-radius: 12px;
     gap: 0.5em;
     border: 1px solid var(--color3);
-    background-color: #ffffff08;
+    background-color: var(--card-bg);
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
@@ -251,16 +252,108 @@ nav a:hover::after {
 }
 
 .services{
-    background-color: var(--color3);
-    height: 855px;
-    display: flex;
+    background-color: var(--color1);
     text-align: center;
-    justify-content: center;
+    height: 855px;
 }
 
 .services h2{
+    padding-top: 20px;
     font: normal 400 4em var(--title);
     color: var(--text-primary);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
-    margin: 0.3em 0px;
+}
+
+.services > p{
+    font: normal 400 1.6em var(--text);
+    color: var(--text-secund);
+}
+
+.cards-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 30px 20px 0 20px;
+
+    justify-items: center;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.cards {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--color3);
+
+    width: 475px;
+    height: 550px;
+}
+
+.cards-tag{
+    padding: 4px 12px;
+    top: 12px;
+    left: 12px;
+    color: var(--text-third);
+    background-color: var(--color3);
+    border-radius: 12px;
+    position: absolute;
+}
+
+.cards-body{
+    padding: 15px;
+}
+
+.cards-body h3{
+    color: var(--text-primary);
+    font: 400 normal 1.6em var(--text-primary);
+    margin: -5px 0 10px 0;
+}
+
+.cards-body p{
+    color: var(--text-secund);
+    font: 400 normal 1.1em var(--text);
+    text-align: justify;
+    margin: 5px 0 20px 0;
+}
+
+.cards-img {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.cards-img img{
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.cards-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 20px 0 20px;
+}
+
+.cards-price {
+    font: 400 normal 1.2em var(--text);
+    color: var(--text-secund);
+}
+
+.cards-btn {
+    font: 400 normal 1.3em var(--text);
+    background-color: var(--card-bg);
+    border: 1px solid var(--color3);
+    border-radius: 12px;
+    padding: 8px 18px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.cards-btn:hover { 
+    background-color: #ffffff12;
+    border-color: var(--color4);
 }
