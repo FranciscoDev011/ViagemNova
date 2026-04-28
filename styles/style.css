@@ -59,7 +59,7 @@ body {
 }
 
 .navbar > h1 {
-    font: normal 400 2em var(--title);
+    font: normal 600 2em var(--title);
     color: var(--text-primary);
     cursor: pointer;
 }
@@ -435,22 +435,130 @@ nav a:hover::after {
 }
 
 .user-acc {
-    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    padding: 12px;
+    width: 40px;
+    height: 40px;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+#user1 {background-color: cyan;}
+#user2 {background-color: rgb(228, 168, 55);}
+#user3 {background-color: rgb(238, 49, 49);}
+
 
 .cards-acc h3 {
     color: var(--text-secund);
     font: 600 normal 1.2em var(--text);
     text-align: left; 
-    margin: 0 10px;
+    margin-left: 20px;
 }
 
 .cards-acc p {
     color: var(--text-secund);
     font: 600 normal 0.8em var(--text);
     text-align: left; 
+    margin-left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0E1826;
+    padding: 52px 1rem 32px;
+    gap: 28px;
+    border-top: 1px solid var(--color3); 
+}
+
+
+.footer-brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo{
+    font-family: var(--title);
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+.footer-brand p {
+    font-family: var(--text);
+    font-size: 0.9em;
+    color: var(--text-secund);
+}
+
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav a {
+    color: var(--text-secund);
+    text-decoration: none;
+    font-family: var(--text);
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--text-primary); 
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;                      
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color3);
+    background-color: var(--icon-bg);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon:hover {
+    border-color: var(--color4);
+    background-color: rgba(255,255,255,0.08);
+}
+
+.icon img {
+    width: 20px;                     
+    height: 20px;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-copy {
+    font-family: var(--text);
+    font-size: 0.78em;
+    color: var(--text-secund);
+    opacity: 0.5;
+    border-top: 1px solid var(--color3);
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
 }
